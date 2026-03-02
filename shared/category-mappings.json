@@ -1,0 +1,81 @@
+{
+  "categories": {
+    "toothpaste": {
+      "exposure_type": "oral",
+      "rinse_off": true,
+      "exposure_multiplier": 0.70,
+      "typical_frequency": "twice_daily",
+      "aliases": ["dentifrice", "tooth paste", "dental cream"]
+    },
+    "lip_balm": {
+      "exposure_type": "oral",
+      "rinse_off": false,
+      "exposure_multiplier": 0.80,
+      "typical_frequency": "multiple_daily",
+      "aliases": ["lip stick", "lip gloss", "lip treatment"]
+    },
+    "sunscreen": {
+      "exposure_type": "dermal",
+      "rinse_off": false,
+      "exposure_multiplier": 0.90,
+      "typical_frequency": "daily",
+      "aliases": ["sun cream", "sun block", "sun protection", "spf"]
+    },
+    "lotion": {
+      "exposure_type": "dermal",
+      "rinse_off": false,
+      "exposure_multiplier": 0.85,
+      "typical_frequency": "daily",
+      "aliases": ["body lotion", "moisturizer", "body cream", "moisturiser"]
+    },
+    "deodorant": {
+      "exposure_type": "dermal",
+      "rinse_off": false,
+      "exposure_multiplier": 0.75,
+      "typical_frequency": "daily",
+      "aliases": ["antiperspirant", "anti-perspirant"]
+    },
+    "shampoo": {
+      "exposure_type": "dermal",
+      "rinse_off": true,
+      "exposure_multiplier": 0.50,
+      "typical_frequency": "several_weekly",
+      "aliases": ["hair shampoo", "hair wash"]
+    },
+    "conditioner": {
+      "exposure_type": "dermal",
+      "rinse_off": true,
+      "exposure_multiplier": 0.55,
+      "typical_frequency": "several_weekly",
+      "aliases": ["hair conditioner", "hair treatment"]
+    },
+    "face_wash": {
+      "exposure_type": "dermal",
+      "rinse_off": true,
+      "exposure_multiplier": 0.45,
+      "typical_frequency": "twice_daily",
+      "aliases": ["facial cleanser", "face cleanser", "facial wash"]
+    },
+    "body_wash": {
+      "exposure_type": "dermal",
+      "rinse_off": true,
+      "exposure_multiplier": 0.40,
+      "typical_frequency": "daily",
+      "aliases": ["shower gel", "body cleanser", "bath gel"]
+    },
+    "moisturizer": {
+      "exposure_type": "dermal",
+      "rinse_off": false,
+      "exposure_multiplier": 0.85,
+      "typical_frequency": "twice_daily",
+      "aliases": ["face cream", "facial moisturizer", "face moisturiser", "night cream", "day cream"]
+    }
+  },
+  "frequency_multipliers": {
+    "multiple_daily": 1.0,
+    "twice_daily": 0.85,
+    "daily": 0.70,
+    "several_weekly": 0.50,
+    "weekly": 0.30
+  }
+}

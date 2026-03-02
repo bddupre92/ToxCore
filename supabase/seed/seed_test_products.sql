@@ -10,7 +10,7 @@ INSERT INTO chemicals (preferred_name, cas_number, inci_name, dtxsid, hazard_dat
     ('Cetyl Alcohol', '36653-82-4', 'CETYL ALCOHOL', 'DTXSID8025148', '{}'),
     ('Fragrance', NULL, 'PARFUM', NULL, '{"transparency_concern": true, "undisclosed_mixture": true}'),
     ('Formaldehyde', '50-00-0', 'FORMALDEHYDE', 'DTXSID7020637', '{"iarc_group": "1", "carcinogen": true}')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (dtxsid) DO NOTHING;
 
 -- Seed test products
 INSERT INTO products (name, brand, category, raw_ingredients, barcode) VALUES
@@ -23,4 +23,4 @@ INSERT INTO products (name, brand, category, raw_ingredients, barcode) VALUES
     ('Test Moisturizer', 'TestBrand', 'moisturizer',
      'AQUA, GLYCERIN, CETYL ALCOHOL, CAPRYLIC/CAPRIC TRIGLYCERIDE, DIMETHICONE, TOCOPHERYL ACETATE, PARFUM',
      '0000000000003')
-ON CONFLICT DO NOTHING;
+ON CONFLICT (barcode) DO NOTHING;

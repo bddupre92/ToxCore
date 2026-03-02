@@ -12,11 +12,11 @@ CREATE POLICY "chemicals_public_read"
 
 CREATE POLICY "chemicals_service_write"
     ON chemicals FOR INSERT
-    WITH CHECK (current_setting('role') = 'service_role');
+    WITH CHECK ((select auth.role()) = 'service_role');
 
 CREATE POLICY "chemicals_service_update"
     ON chemicals FOR UPDATE
-    USING (current_setting('role') = 'service_role');
+    USING ((select auth.role()) = 'service_role');
 
 -- ============================================================================
 -- CHEMICAL SYNONYMS
@@ -29,7 +29,7 @@ CREATE POLICY "synonyms_public_read"
 
 CREATE POLICY "synonyms_service_write"
     ON chemical_synonyms FOR INSERT
-    WITH CHECK (current_setting('role') = 'service_role');
+    WITH CHECK ((select auth.role()) = 'service_role');
 
 -- ============================================================================
 -- REGULATORY LISTS
@@ -42,7 +42,7 @@ CREATE POLICY "reg_lists_public_read"
 
 CREATE POLICY "reg_lists_service_write"
     ON regulatory_lists FOR INSERT
-    WITH CHECK (current_setting('role') = 'service_role');
+    WITH CHECK ((select auth.role()) = 'service_role');
 
 -- ============================================================================
 -- CHEMICAL REGULATORY STATUS
@@ -55,7 +55,7 @@ CREATE POLICY "crs_public_read"
 
 CREATE POLICY "crs_service_write"
     ON chemical_regulatory_status FOR INSERT
-    WITH CHECK (current_setting('role') = 'service_role');
+    WITH CHECK ((select auth.role()) = 'service_role');
 
 -- ============================================================================
 -- PRODUCTS
@@ -68,11 +68,11 @@ CREATE POLICY "products_public_read"
 
 CREATE POLICY "products_service_write"
     ON products FOR INSERT
-    WITH CHECK (current_setting('role') = 'service_role');
+    WITH CHECK ((select auth.role()) = 'service_role');
 
 CREATE POLICY "products_service_update"
     ON products FOR UPDATE
-    USING (current_setting('role') = 'service_role');
+    USING ((select auth.role()) = 'service_role');
 
 -- ============================================================================
 -- PRODUCT INGREDIENTS
@@ -85,7 +85,7 @@ CREATE POLICY "pi_public_read"
 
 CREATE POLICY "pi_service_write"
     ON product_ingredients FOR INSERT
-    WITH CHECK (current_setting('role') = 'service_role');
+    WITH CHECK ((select auth.role()) = 'service_role');
 
 -- ============================================================================
 -- PRODUCT SCORES
@@ -98,11 +98,11 @@ CREATE POLICY "scores_public_read"
 
 CREATE POLICY "scores_service_write"
     ON product_scores FOR INSERT
-    WITH CHECK (current_setting('role') = 'service_role');
+    WITH CHECK ((select auth.role()) = 'service_role');
 
 CREATE POLICY "scores_service_update"
     ON product_scores FOR UPDATE
-    USING (current_setting('role') = 'service_role');
+    USING ((select auth.role()) = 'service_role');
 
 -- ============================================================================
 -- NAME MAPPINGS
@@ -115,7 +115,7 @@ CREATE POLICY "nm_public_read"
 
 CREATE POLICY "nm_service_write"
     ON name_mappings FOR INSERT
-    WITH CHECK (current_setting('role') = 'service_role');
+    WITH CHECK ((select auth.role()) = 'service_role');
 
 -- ============================================================================
 -- AI EXPLANATIONS
@@ -128,4 +128,4 @@ CREATE POLICY "ae_public_read"
 
 CREATE POLICY "ae_service_write"
     ON ai_explanations FOR INSERT
-    WITH CHECK (current_setting('role') = 'service_role');
+    WITH CHECK ((select auth.role()) = 'service_role');

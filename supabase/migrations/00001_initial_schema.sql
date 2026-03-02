@@ -84,7 +84,7 @@ CREATE INDEX idx_crs_list ON chemical_regulatory_status (list_id);
 
 CREATE TABLE products (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    barcode VARCHAR(50),
+    barcode VARCHAR(50) UNIQUE,
     name TEXT NOT NULL,
     brand TEXT,
     category VARCHAR(100),
